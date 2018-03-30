@@ -1,0 +1,9 @@
+[package]
+name = "olm-sys"
+version = "0.1.0"
+authors = ["BrainBlasted <brainblasted@disroot.org>"]
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.26"
