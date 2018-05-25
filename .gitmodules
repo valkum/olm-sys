@@ -1,0 +1,3 @@
+[submodule "olm"]
+	path = olm
+	url = https://gitlab.gnome.org/jhaye/olm
