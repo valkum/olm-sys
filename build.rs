@@ -26,7 +26,7 @@ fn main() {
 
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
-        .clang_arg(format!("-I{}include", src.display()))
+        .clang_arg("-I./olm/include")
         .generate()
         .expect("Unable to generate bindings for libolm");
 
