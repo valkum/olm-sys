@@ -1,12 +1,10 @@
 [package]
 name = "olm-sys"
-version = "0.1.1"
+version = "0.1.3"
 authors = ["BrainBlasted <brainblasted@disroot.org>"]
 license = "GPL-3.0"
 description = "Low level binding for libolm"
 source = "https://gitlab.gnome.org/BrainBlasted/olm-sys"
-
-[dependencies]
 
 [build-dependencies]
 bindgen = "0.37"
