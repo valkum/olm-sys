@@ -9,4 +9,4 @@ source = "https://gitlab.gnome.org/BrainBlasted/olm-sys"
 [dependencies]
 
 [build-dependencies]
-bindgen = "0.26"
+bindgen = "0.37"
