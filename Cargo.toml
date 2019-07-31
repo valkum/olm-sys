@@ -7,4 +7,4 @@ description = "Low level binding for libolm"
 source = "https://gitlab.gnome.org/BrainBlasted/olm-sys"
 
 [build-dependencies]
-bindgen = "0.37"
+bindgen = "0.51.0"
