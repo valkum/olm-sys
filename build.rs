@@ -1,5 +1,3 @@
-extern crate bindgen;
-
 use std::process::{Command, Stdio};
 use std::{env, fs, path::PathBuf};
 
@@ -24,16 +22,6 @@ fn main() {
         let _ = fs::copy(&src.join("build/libolm.a"), &dst_file);
     }
 
-    let bindings = bindgen::Builder::default()
-        .header("wrapper.h")
-        .clang_arg("-I./olm/include")
-        .generate()
-        .expect("Unable to generate bindings for libolm");
-
-    bindings
-        .write_to_file(out_path.join("bindings.rs"))
-        .expect("Couldn't write bindings for libolm to output directory");
-
     // Link to olm static library
     println!("cargo:rustc-link-lib=static=olm");
     println!("cargo:rustc-link-search={}", dst.display());
@@ -42,11 +30,10 @@ fn main() {
 }
 
 fn run(cmd: &mut Command) {
-    assert!(
-        cmd.stdout(Stdio::inherit())
-            .stderr(Stdio::inherit())
-            .status()
-            .unwrap()
-            .success()
-    );
+    assert!(cmd
+        .stdout(Stdio::inherit())
+        .stderr(Stdio::inherit())
+        .status()
+        .unwrap()
+        .success());
 }
