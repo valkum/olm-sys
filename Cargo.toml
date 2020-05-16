@@ -7,3 +7,5 @@ description = "Low level binding for libolm"
 repository = "https://gitlab.gnome.org/BrainBlasted/olm-sys"
 build = "build.rs"
 
+[build-dependencies]
+cc = { version = "1.0", features = ["parallel"] }
